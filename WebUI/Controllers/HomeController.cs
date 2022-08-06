@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using JDNFCalc;
 using Microsoft.AspNetCore.Mvc;
 using WebUI.Models;
 
@@ -12,6 +13,8 @@ namespace WebUI.Controllers
     {
         public IActionResult Index()
         {
+            Sumar sumar = new Sumar();
+            ViewBag.Suma = sumar.Ejecutar(4, 10);
             return View();
         }
 
